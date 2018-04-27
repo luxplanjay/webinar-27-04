@@ -1,0 +1,259 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+}
+
+/* COLOR */
+.color-box {
+  width: 600px;
+  height: 300px;
+  margin: 0 auto;
+  /* background-color: rgb(255, 0, 0); */
+  /* background-color: #2a2a2a; */
+  /* background-color: rgba(255, 0, 0, 0.3); */
+}
+
+/* GRADIENT */
+/* .banner {
+  min-height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 82, 82, 0.5),
+      rgba(33, 33, 33, 0.5)
+    ),
+    url('https://images.pexels.com/photos/629159/pexels-photo-629159.jpeg');
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+
+/* PSEUDO */
+.article {
+  width: 500px;
+  padding: 10px;
+  margin: 0 auto;
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+.article:hover .article-title::before,
+.article:hover .article-title::after {
+  background-color: #ff4081;
+}
+
+.article-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 28px;
+  text-align: center;
+}
+
+.article-title::before,
+.article-title::after {
+  display: block;
+  content: '';
+  height: 3px;
+  margin: 0 auto;
+  background-color: #2196f3;
+}
+
+.article-title::before {
+  width: 40%;
+  margin-bottom: 5px;
+}
+
+.article-title::after {
+  width: 50%;
+  margin-top: 5px;
+  /* background-image: url('https://image.flaticon.com/icons/svg/149/149060.svg'); */
+}
+
+.article-text {
+  line-height: 1.5;
+  font-size: 18px;
+  color: #212121;
+}
+
+.article-text::selection {
+  background-color: #212121;
+  color: #ffffff;
+}
+
+.article-text::before {
+  display: inline-block;
+  content: '\201C';
+}
+
+.article-text::after {
+  display: inline-block;
+  content: '\201D';
+}
+
+.article-link {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 2px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #2196f3;
+}
+
+.article-link span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.article-link:hover {
+  background-color: #ff4081;
+}
+
+.article-link::before {
+  display: inline-block;
+  vertical-align: middle;
+  content: '';
+  width: 26px;
+  height: 26px;
+  margin-right: 5px;
+  background-image: url('https://image.flaticon.com/icons/svg/122/122658.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* FLOATS */
+.parent {
+  padding: 30px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+.child.red {
+  /* float: left; */
+  width: 100px;
+  height: 100px;
+  background-color: #f44336;
+}
+
+.child.green {
+  /* float: right; */
+  width: 150px;
+  height: 150px;
+  background-color: #4caf50;
+}
+
+.child.blue {
+  /* clear: right;
+  float: right; */
+  width: 200px;
+  height: 200px;
+  background-color: #2196f3;
+}
+
+.clearfix::after {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+/* Обткание текстом */
+.art-float {
+  width: 700px;
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+.art-float img {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.art-float p {
+}
+
+/* PAGE HEADER */
+
+.page-header {
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  float: left;
+}
+
+.site-nav {
+  float: right;
+  padding: 0;
+  margin: 0;
+  margin-top: 5px;
+  list-style: none;
+}
+
+.site-nav-item {
+  float: left;
+}
+
+.site-nav-link {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #212121;
+  padding: 5px 10px;
+}
+
+.site-nav-link:hover {
+  color: #ff4081;
+}
+
+/* POSTS */
+
+.container {
+  width: 1170px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.posts {
+}
+
+.posts-title {
+}
+
+.posts-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.posts-item {
+  float: left;
+  width: 350px;
+  padding: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+.posts-item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
